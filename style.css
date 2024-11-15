@@ -81,7 +81,7 @@ li:hover{
 
 /* .box1::before {
     content: "dwd";
-    background-image: url("../img/cvb.png");
+    background-image: url("./img/cvb.png");
     object-fit: cover;
     background-position: center;
     min-width: 250px;
@@ -98,7 +98,7 @@ li:hover{
     margin: -15px;
     z-index: -1;
     background-color: #fff;
-    background-image: url("../img/cvb.png");
+    background-image: url("./img/cvb.png");
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -147,7 +147,7 @@ li:hover{
         display: block;
         width: 50px;
         height: 50px;
-        background-image: url(../img/neuromagictrick.gif);
+        background-image: url(./img/neuromagictrick.gif);
         position: absolute;
         background-size: contain;
         background-repeat: no-repeat;
@@ -310,7 +310,7 @@ li a {
     display: block;
     width: 150px;
     height: 150px;
-    background-image: url(../img/nepeta.gif);
+    background-image: url(./img/nepeta.gif);
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
@@ -552,7 +552,7 @@ white-space: nowrap;
 }
 
 #chatDisplay {
-    background-image: url('../img/W3RDAQ0TF9FAZND2B4SN3E3SA0.jpg');
+    background-image: url('./img/W3RDAQ0TF9FAZND2B4SN3E3SA0.jpg');
     object-fit: cover;
     background-size: contain;
     background-position: center;
