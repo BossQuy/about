@@ -2,12 +2,14 @@ const audioPlayer = document.getElementById("audio-player");
 const playPauseButton = document.getElementById("play-pause");
 const currentTimeDisplay = document.getElementById("current-time");
 const durationDisplay = document.getElementById("duration");
+const volumeSlider = document.getElementById("volume-slider");
 
 let songIndex = 0;
 const songs = [
+  './music/maou2.mp3',
+  './music/maou1.mp3',
   './music/maou.mp3',
-  './music/maou.mp3',
-  './music/maou.mp3',
+  './music/maou3.mp3',
 ];
 
 function loadSong(index) {
@@ -61,3 +63,10 @@ function formatTime(seconds) {
 
 // Load the first song initially
 loadSong(songIndex);
+
+// Volume control
+volumeSlider.addEventListener("input", () => {
+  audioPlayer.volume = volumeSlider.value;
+});
+
+// playSong();

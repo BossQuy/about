@@ -17,16 +17,16 @@ body {
     width: 250px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .header h3,
 .header p {
     margin: 5px 0;
-}
-
-.album-art {
-    width: 100%;
-    border-radius: 5px;
+    color: rgb(0, 204, 255);
 }
 
 .controls button {
@@ -43,6 +43,27 @@ body {
 }
 
 .time {
+
     font-size: 14px;
+    color: rgb(0, 204, 255);
+}
+
+.music-meta {
+    min-width: 100%;
+    min-height: fit-content;
+}
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.volume-control label {
+    margin-right: 10px;
     color: #8e5cd4;
+}
+
+#volume-slider {
+    width: 100px;
 }

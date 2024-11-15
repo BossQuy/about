@@ -8,17 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap"
         rel="stylesheet">
-    <title>Thông Tin Cá Nhân</title>
-    <link rel="stylesheet" href="./style.css">'
-    <link rel="stylesheet" href="./music.css">'
-    <link rel="icon" href="./img/icon.ico" />'
+    <title>Maou_sama</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./music.css">
+    <link rel="icon" href="./img/icon.ico" />
 
 
 
 </head>
 
 <body>
-
     <div class="container">
         <div class="box1">
             <div class="navbox1">
@@ -144,17 +143,22 @@
             <div class="main-box">
                 <div class="music-player">
                     <div class="header">
-                        <h3>Needy Streamer Overload</h3>
+                        <h3>Góc một chút nhạc</h3>
                         <p>Uploaded by</p>
                     </div>
-                    <img src="your-image-url.png" alt="Album Art" class="album-art">
-                    <div class="controls">
-                        <button id="prev" onclick="prevSong()">⏮️</button>
-                        <button id="play-pause" onclick="togglePlay()">▶️</button>
-                        <button id="next" onclick="nextSong()">⏭️</button>
-                    </div>
-                    <div class="time">
-                        <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                    <div class="music-meta">
+                        <div class="controls">
+                            <button id="prev" onclick="prevSong()">⏮️</button>
+                            <button id="play-pause" onclick="togglePlay()">▶️</button>
+                            <button id="next" onclick="nextSong()">⏭️</button>
+                        </div>
+                        <div class="time">
+                            <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                        </div>
+                        <div class="volume-control">
+                            <label for="volume-slider">Volume</label>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
                     </div>
                 </div>
                 <audio id="audio-player"></audio>
@@ -178,7 +182,7 @@
         <p>Bạn đã chạm vào cuối trang!</p>
     </div>
     <script defer src="./script.js"></script>
-    <script src="./music.js"></script>
+    <script defer src="./music.js"></script>
     <script defer src="./oneko.js"></script>
 </body>
 

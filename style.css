@@ -78,8 +78,6 @@ li::before {
 li:hover{
     margin-left: 0;
 }
-.navbarbox-left li a {
-}
 
 /* .box1::before {
     content: "dwd";
@@ -143,6 +141,17 @@ li:hover{
 .running-text .marquee-content {
     padding-right: 100%;
     font-weight: bolder;
+}
+.running-text .marquee-content::before{
+    content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/neuromagictrick.gif);
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -30px;
 }
 
 .marquee {
@@ -287,13 +296,26 @@ li a {
 
 /* Container chính */
 .bang-trang-thai {
+    position: relative;
     width: 600px;
     backdrop-filter: blur(20px);
     background-color: #00000031;
     color: white;
     border: 3px solid #004080;
     border-radius: 10px;
-    overflow: hidden;
+}
+
+.bang-trang-thai::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/nepeta.gif);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -50px;
+    right: 10px;
 }
 
 /* Tiêu đề */
@@ -451,6 +473,7 @@ white-space: nowrap;
 .chu {
     color: #ffc107;
     text-align: center;
+    margin: 0;
 }
 /* Bố cục hộp trò chuyện */
 .chat-container {
@@ -526,4 +549,11 @@ white-space: nowrap;
     background-color: #45a049;
     padding-right: 30px;
    
+}
+
+#chatDisplay {
+    background-image: url('../img/W3RDAQ0TF9FAZND2B4SN3E3SA0.jpg');
+    object-fit: cover;
+    background-size: contain;
+    background-position: center;
 }
