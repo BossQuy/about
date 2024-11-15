@@ -62,8 +62,9 @@ body {
     object-fit: cover;
     background-position: center;
     min-width: 250px;
-    height: 100vh;
+    min-height: 100%;
     overflow: hidden;
+    transition: 0.5s;
 }
 
  li {
@@ -81,7 +82,7 @@ li:hover{
 
 /* .box1::before {
     content: "dwd";
-    background-image: url("./img/cvb.png");
+    background-image: url("./img/cvb.webp");
     object-fit: cover;
     background-position: center;
     min-width: 250px;
@@ -98,7 +99,7 @@ li:hover{
     margin: -15px;
     z-index: -1;
     background-color: #fff;
-    background-image: url("./img/cvb.png");
+    background-image: url("./img/cvb.webp");
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -115,8 +116,11 @@ li:hover{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
+    min-height: max-content;
+    overflow: auto;
+    padding: 100px 0;
+    gap:38px;
 }
 .wallpaper {
     display: inline-block;
@@ -230,13 +234,13 @@ li a {
 
 
 .background-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 .background-video iframe {
@@ -552,8 +556,18 @@ white-space: nowrap;
 }
 
 #chatDisplay {
-    background-image: url('./img/W3RDAQ0TF9FAZND2B4SN3E3SA0.jpg');
+    background-image: url('./img/W3RDAQ0TF9FAZND2B4SN3E3SA0.webp');
     object-fit: cover;
     background-size: contain;
     background-position: center;
+}
+
+@media (width <900px) {
+    .box1 {
+        margin-left: -250px;
+    }
+
+    .box2 {
+        flex-direction: column;
+    }
 }
