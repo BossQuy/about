@@ -1,0 +1,529 @@
+body {
+    font-family: "Dancing Script", cursive;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* background-color: #f4f4f9; */
+}
+
+.profile-box {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.box1 {
+    position: relative;
+    object-fit: cover;
+    background-position: center;
+    min-width: 250px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+ li {
+    margin-left: -12px;
+    transition: 0.2s;
+}
+
+li::before {
+    content: ">";
+}
+
+li:hover{
+    margin-left: 0;
+}
+.navbarbox-left li a {
+}
+
+/* .box1::before {
+    content: "dwd";
+    background-image: url("../img/cvb.png");
+    object-fit: cover;
+    background-position: center;
+    min-width: 250px;
+    min-height: 100%;
+    filter: blur(5px);
+} */
+
+.box1::before {
+    position: absolute;
+    top:0;
+    left: 0;
+    content: "";
+    inset: 0;
+    margin: -15px;
+    z-index: -1;
+    background-color: #fff;
+    background-image: url("../img/cvb.png");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px)
+}
+
+
+
+.box2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.wallpaper {
+    display: inline-block;
+    padding: 10px ;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--base);
+    background-image: var(--image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.wallpaper:hover {
+    background-color: #b3d6e3;
+}
+
+
+.running-text .marquee-content {
+    padding-right: 100%;
+    font-weight: bolder;
+}
+
+.marquee {
+    display: flex;
+    position: fixed;
+    font-size: 1em;
+    top: 10%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: fit-content;
+    /* Đặt chiều rộng của container */
+    background-color: #3333334a;
+}
+
+.marquee-content {
+    display: inline-block;
+    /* padding-right: 15px; */
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-flip {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+ul {
+    list-style-type: none; /* Loại bỏ dấu chấm */
+    padding: 0; /* Loại bỏ khoảng cách mặc định */
+    margin-top: 81px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+li {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục trong danh sách */
+    font-size: 1.2em;
+}
+
+li a {
+    color: #00ff40;
+}
+
+/* CSS cho dòng chữ chạy */
+.marquee {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-right: 100%;
+    font-size: 1.5rem;
+    color: white;
+    animation: marquee 10s linear infinite;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.78vh; /* 16:9 ratio adjustment */
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 56.25vw; /* 9:16 ratio adjustment */
+    object-fit: cover;
+    pointer-events: none; /* Ngăn tương tác với video */
+}
+
+/* Container của header */
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* background-color: #333; Màu nền tùy chỉnh */
+    color: #f80303;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top:0;
+    min-width: 100%;
+    height: 71px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+
+}
+.box-left{
+    height: 50px;
+}
+/* Tiêu đề trang */
+.page-title {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* Ảnh đại diện ở góc phải */
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container chính */
+.bang-trang-thai {
+    width: 600px;
+    backdrop-filter: blur(20px);
+    background-color: #00000031;
+    color: white;
+    border: 3px solid #004080;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Tiêu đề */
+.tieu-de {
+    display: flex;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #004080;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.tieu-de h2 {
+    margin: 0;
+    color: #ffc107;
+}
+
+/* Nội dung */
+.noi-dung {
+    padding: 15px;
+}
+
+/* Layout của hàng */
+.hang {
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid #004080;
+}
+
+/* Layout của cột */
+.cot {
+    flex: 1;
+    padding: 15px;
+   
+}
+
+.a1 {
+    color: #ffc107 !important;
+}
+
+/* Danh sách vật phẩm */
+.vat-pham {
+    background-color: #0055a5;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Avatar */
+.avatar {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+.avatar h2, .avatar p {
+    min-width: 50%;
+}
+
+.content-text{
+    margin: 10px;
+}
+
+.anh-dai-dien {
+    width:  250px;
+    height: 250px;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+    margin: 15px;
+}
+
+/* Thông tin nhân vật */
+.thong-tin-nhan-vat .thong-tin {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+.cot .thong-tin {
+white-space: nowrap;
+}
+/* Chỉ số */
+.chi-so .chi-so-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+/* Điểm kỹ năng còn lại */
+.diem-ky-nang {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.gia-tri-diem {
+    font-size: 1.5em;
+    color: #ffc107;
+    margin-top: 5px;
+}
+#gif {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    cursor: grab;
+    z-index: 1000; 
+}
+/* Cài đặt thanh ở cuối trang */
+/* Cài đặt thanh ở cuối trang */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background-color:#e08888; */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    /* Ẩn thanh ban đầu */
+    transition: transform 0.3s ease;
+    /* Hiệu ứng trượt lên */
+    backdrop-filter: blur(20px);
+}
+
+/* Hiển thị thanh khi có class 'show' */
+.bottom-bar.show {
+    transform: translateY(0);
+}
+.main-box {
+    display: flex;
+    border: 2px solid var(--lilith-border-color);
+    background: var(--lilith-inactive-color);
+    padding: 4px;
+    margin-left: 15px;
+    padding-bottom: 0;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    background-color: #282a5431;
+    border: 3px solid #004080;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+.chu {
+    color: #ffc107;
+    text-align: center;
+}
+/* Bố cục hộp trò chuyện */
+.chat-container {
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.chat-display {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #bdcfe8;
+}
+
+.chat-display .message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chat-display .message.user {
+    background-color: #d1e7dd;
+    text-align: right;
+    margin-left: auto;
+}
+
+.chat-display .message.other {
+    background-color: #e2e3e5;
+    text-align: left;
+    margin-right: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-input button:hover {
+    background-color: #45a049;
+    padding-right: 30px;
+   
+}
