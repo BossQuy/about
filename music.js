@@ -69,4 +69,4 @@ volumeSlider.addEventListener("input", () => {
   audioPlayer.volume = volumeSlider.value;
 });
 
-// playSong();
+playSong();
