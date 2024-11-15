@@ -8,7 +8,7 @@ body {
 }
 
 .music-player {
- background-image: url('../img/cd4162674cc114bf5dfe80c3ace5fb48.jpg');
+ background-image: url('./img/cd4162674cc114bf5dfe80c3ace5fb48.jpg');
  background-position: top;
     color: #8e5cd4;
     text-align: center;
