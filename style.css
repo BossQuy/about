@@ -51,20 +51,34 @@ body {
 
 .container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
+    overflow: auto;
 
 }
 
 .box1 {
-    position: relative;
+    position: fixed;
+    /* Giữ nguyên vị trí khi cuộn */
+    top: 0;
+    /* Căn chỉnh với mép trên */
+    left: 0;
+    /* Căn chỉnh với mép trái */
     object-fit: cover;
+    /* Giữ tỷ lệ hình nền */
     background-position: center;
+    /* Căn giữa hình nền */
     min-width: 250px;
-    min-height: 100%;
+    /* Độ rộng tối thiểu */
+    height: 100%;
+    /* Chiều cao toàn màn hình */
     overflow: hidden;
+    /* Ẩn nội dung tràn */
     transition: 0.5s;
+    /* Hiệu ứng chuyển động */
+    /* z-index: 10;
+    Đảm bảo nó nổi lên trên các phần tử khác nếu cần */
 }
 
  li {
@@ -89,38 +103,47 @@ li:hover{
     min-height: 100%;
     filter: blur(5px);
 } */
-
 .box1::before {
     position: absolute;
-    top:0;
+    /* Định vị trong phạm vi của .box1 */
+    top: 0;
     left: 0;
     content: "";
-    inset: 0;
-    margin: -15px;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    /* Đặt phía dưới nội dung của .box1 */
     background-color: #fff;
     background-image: url("./img/cvb.webp");
     background-repeat: no-repeat;
-    object-fit: cover;
     background-size: cover;
+    /* Hình nền phủ đầy khung */
     background-position: center;
-    filter: blur(5px)
+    filter: blur(5px);
+    /* Hiệu ứng làm mờ */
 }
-
-
 
 .box2 {
     position: relative;
+    /* Đảm bảo nội dung của .box2 nằm trong dòng chảy */
+    margin-left: 250px;
+    /* Đẩy nội dung sang bên phải của .box1 */
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - 250px);
+    /* Trừ khoảng cách của .box1 */
     height: 100%;
+    /* Chiều cao theo nội dung */
     min-height: max-content;
+    /* Đảm bảo vừa với nội dung */
     overflow: auto;
+    /* Cho phép cuộn nội dung */
     padding: 100px 0;
-    gap:38px;
+    /* Khoảng cách trên dưới */
+    gap: 38px;
+    /* Khoảng cách giữa các phần tử con */
 }
 .wallpaper {
     display: inline-block;
@@ -145,6 +168,7 @@ li:hover{
 .running-text .marquee-content {
     padding-right: 100%;
     font-weight: bolder;
+    z-index: 9999;
 }
 .running-text .marquee-content::before{
     content: "";
@@ -168,7 +192,6 @@ li:hover{
     width: 100%;
     height: fit-content;
     /* Đặt chiều rộng của container */
-    background-color: #3333334a;
 }
 
 .marquee-content {
@@ -235,27 +258,27 @@ li a {
 
 .background-video {
     position: fixed;
+    /* Cố định video ở một vị trí */
     top: 0;
     left: 0;
     width: 100%;
+    /* Bao phủ toàn bộ chiều rộng màn hình */
     height: 100%;
-    overflow: hidden;
+    /* Bao phủ toàn bộ chiều cao màn hình */
     z-index: -2;
+    /* Đặt phía dưới nội dung khác */
+    overflow: hidden;
+    /* Ẩn phần video vượt ra ngoài */
 }
 
-.background-video iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 177.78vh; /* 16:9 ratio adjustment */
-    height: 100vh;
-    min-width: 100vw;
-    min-height: 56.25vw; /* 9:16 ratio adjustment */
+.background-video video {
+    width: 100%;
+    /* Bao phủ chiều ngang */
+    height: 100%;
+    /* Bao phủ chiều dọc */
     object-fit: cover;
-    pointer-events: none; /* Ngăn tương tác với video */
+    /* Đảm bảo video lấp đầy mà không méo */
 }
-
 /* Container của header */
 .content-header {
     display: flex;
@@ -300,16 +323,21 @@ li a {
 
 /* Container chính */
 .bang-trang-thai {
-    position: relative;
     width: 600px;
+    height: auto;
+    min-width: 300px;
     backdrop-filter: blur(20px);
-    background-color: #00000031;
     color: white;
     border: 3px solid #004080;
     border-radius: 10px;
+    padding: 20px;
+    resize: both;
+    overflow: visible;
+    /* Cho phép phần tử con chàn ra ngoài mà không bị cắt bớt */
+    margin: 0;
 }
 
-.bang-trang-thai::after{
+.bang-trang-thai::after {
     content: "";
     display: block;
     width: 150px;
@@ -319,9 +347,10 @@ li a {
     background-size: contain;
     background-repeat: no-repeat;
     top: -50px;
-    right: 10px;
+    /* Chèn ra ngoài khung trên */
+    right: -50px;
+    /* Chèn ra ngoài khung bên phải */
 }
-
 /* Tiêu đề */
 .tieu-de {
     display: flex;
@@ -462,7 +491,6 @@ white-space: nowrap;
     border: 2px solid var(--lilith-border-color);
     background: var(--lilith-inactive-color);
     padding: 4px;
-    margin-left: 15px;
     padding-bottom: 0;
     flex-direction: column;
     backdrop-filter: blur(20px);
@@ -471,8 +499,10 @@ white-space: nowrap;
     border-radius: 10px;
     align-items: center;
     justify-content: space-around;
-
-    
+    width: 300px;
+    /* Chiều rộng cố định */
+    height: 645px;
+    /* Chiều cao cố định */
 }
 .chu {
     color: #ffc107;
