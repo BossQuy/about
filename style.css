@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: row;
     overflow: auto;
-    justify-content: center;
+    align-items: flex-start;
 }
 
 .box1 {
