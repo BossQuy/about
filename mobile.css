@@ -1,5 +1,9 @@
 @media (width <900px) {
 
+    * 
+    {
+        box-sizing: border-box;
+    }
     .container{
     padding: 0 20px 0 20px; 
     width: 100%;
