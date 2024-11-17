@@ -129,4 +129,21 @@ function clearMessages() {
 // Tải tin nhắn khi trang được load
 window.onload = loadMessages;
 
+function toggleBox() {
+    const box1 = document.getElementById('box1');
+    box1.classList.toggle('show'); // Thêm hoặc xóa class "show"
+}
+
+// Đóng box1 khi nhấn vào bất kỳ đâu ngoài box1
+document.addEventListener('click', function (e) {
+    const box1 = document.getElementById('box1');
+    if (box1.classList.contains('show') &&
+        !box1.contains(e.target) && 
+        !e.target.closest('.profile-pictures')) {
+        box1.classList.remove('show');
+    }
+});
+
+
+
 

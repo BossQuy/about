@@ -1,0 +1,75 @@
+@media (width <900px) {
+
+    .container{
+    padding: 0 20px 0 20px; 
+    }
+.box1 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Ẩn box1 ra khỏi màn hình */
+    width: 50%;
+    /* Chiếm nửa màn hình */
+    height: 100%;
+    transition: all 0.3s ease;
+    /* Hiệu ứng chuyển động */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng bóng */
+    z-index: 90;
+}
+   .box1.show {
+      left: 0;
+   }
+
+    .box2 {
+        flex-direction: column;
+        margin: 0;
+        max-width: 390px;
+        width: unset !important;
+        min-width: 390px;
+        overflow: hidden;
+    }
+    .bang-trang-thai{
+    max-width: 390px;
+
+    }
+    .cot.avatar{
+        display: flex;
+         flex-direction: column;
+         align-content: flex-start;
+
+    }
+    .anh-dai-dien {
+        margin: 0;
+        width: 300px;
+        height: 500px;
+        border: 2px solid #053fff;
+    }
+    .cot.chi-so { 
+        display: none;
+    }
+  .bang-trang-thai::after{
+    content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: -50px;
+        /* Chèn ra ngoài khung trên */
+        right: 10px;
+  }
+  .main-box{
+    max-width: 390px;
+        min-width: 390px;
+  }
+  .music-player {
+    max-width: 390px;
+        min-width: 390px;   
+  }
+  .content-header{
+    padding: 0;
+  }
+    
+}
