@@ -85,6 +85,7 @@
         min-width: 390px;   
   }
     body>.content-header {
+        min-width: 100%;
     padding: 16px;
     left: 0;
   }
