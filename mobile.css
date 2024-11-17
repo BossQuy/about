@@ -84,8 +84,9 @@
     max-width: 390px;
         min-width: 390px;   
   }
-  .content-header{
-    padding: 0;
+    body>.content-header {
+    padding: 16px;
+    left: 0;
   }
     .noi-dung{
         padding: 0;
@@ -94,5 +95,9 @@
     .background-video video {
         width: 100vw;
         height: 100vh;
+    }
+
+    .profile-pictures {
+        display: block;
     }
 }

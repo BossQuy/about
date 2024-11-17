@@ -296,15 +296,21 @@ li a {
     height: 71px;
     border-bottom: 1px solid black;
     box-sizing: border-box;
+    z-index: 10;
 
+}
+
+body>.content-header{
+        left: 250px;
+            width: calc(100% - 250px);
 }
 .box-left{
     height: 50px;
 }
 /* Tiêu đề trang */
 .page-title {
+    margin: 0;
     font-size: 1.5rem;
-    margin: 0 auto;
     font-weight: bold;
 }
 
@@ -316,6 +322,7 @@ li a {
     overflow: hidden;
 }
 .profile-pictures {
+    display: none;
     width: 40px;
     height: 40px;
     overflow: hidden;
