@@ -50,9 +50,19 @@
 
 
     .bang-trang-thai{
-        min-height: 100% !important;
+    min-height: fit-content !important;
     max-width: 390px;
-    padding: 0;
+    padding: 15px;
+    }
+
+    .hang {
+        border: none;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .hang .cot {
+        padding: 0;
     }
     .cot.avatar{
         display: flex;
@@ -84,10 +94,10 @@
   .main-box{
     max-width: 390px;
         min-width: 390px;
+        padding: 15px;
   }
   .music-player {
-    max-width: 390px;
-        min-width: 390px;   
+        min-width: 100%;   
   }
     body>.content-header {
         min-width: 100%;
@@ -108,5 +118,8 @@
     }
     .bottom-bar{
         display: none;
+    }
+
+    .main-box>div {
     }
 }

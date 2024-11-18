@@ -513,12 +513,13 @@ white-space: nowrap;
     border: 3px solid #004080;
     border-radius: 10px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 300px;
     /* Chiều rộng cố định */
     height: 645px;
     /* Chiều cao cố định */
 }
+
 .chu {
     color: #ffc107;
     text-align: center;
