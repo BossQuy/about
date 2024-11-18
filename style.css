@@ -249,7 +249,7 @@ li a {
     padding-right: 100%;
     font-size: 1.5rem;
     color: white;
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 
